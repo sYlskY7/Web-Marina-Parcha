@@ -1,0 +1,39 @@
+/* Estilos para el botón de reservar cita */
+.reservar-btn-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  text-align: center;
+}
+
+.reservar-btn {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #a0dff5;
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.reservar-btn:hover {
+  background-color: #2980b9;
+}
+  
+  /* Volver al Inicio */
+.link-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #a0dff5;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* Change color when hovering over the link */
+.link-button:hover {
+  background-color: #2980b9;
+}
+
+

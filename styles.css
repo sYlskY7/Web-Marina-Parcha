@@ -1,0 +1,544 @@
+/* Fuentes importadas */
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Roboto:wght@100&display=swap");
+
+/* Estilos generales */
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  color: #333;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Encabezado y menú */
+header {
+  background-color: #f2f2f2;
+  color: #755d55;
+  display: flex;
+  justify-content: space between;
+  align-items: center;
+  padding: 15px 40px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dark-header {
+  background-color: #a0dff5;
+  color: #ffffff;
+}
+/* Menú */
+nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  transition: background-color 0.3s;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding-top: 25px;
+  padding-right: 20px;
+}
+
+nav ul {
+  list-style: none;
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+/* Enlaces del menú */
+nav a {
+  text-decoration: none;
+  color: var(--menu-text-color);
+  transition: color 0.3s;
+}
+
+/* Logo */
+.logo img {
+  max-width: 100px;
+  height: auto;
+  transition: filter 0.3s, transform 0.3s;
+}
+
+/* Enlaces claros */
+.light-link {
+  color: var(--menu-text-color-light);
+}
+
+/* Cambio de color del menú según la sección activa */
+#inicio:target ~ header,
+#servicios:target ~ header,
+#sobre-mi:target ~ header,
+#precios:target ~ header,
+#contacto:target ~ header {
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+/* Secciones alternando colores */
+section {
+  padding: 100px 0;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: background-color 0.3s ease-in-out;
+}
+
+section:nth-child(odd) {
+  background-color: #333;
+  color: #f2f2f2;
+}
+
+/* Títulos de sección */
+h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+/* Estilos para la seccion de Inicio */
+#inicio {
+  background-image: url("./Assets/background.jpg");
+  background-color: #f2f2f2;
+  background-size: cover;
+  background-position: center;
+  color: #7a7777;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.intro-container {
+  position: relative;
+  z-index: 1;
+  padding: 50px;
+}
+
+.intro-content h1 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 148px;
+  margin-bottom: 10px;
+  animation: fadeInUp 1s ease; /* Agrega una animación de entrada */
+}
+
+.intro-content p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 48px;
+  animation: fadeInUp 1s 0.5s ease; /* Agrega una animación de entrada con retraso */
+}
+
+/* Estilos para "Desplazar para explorar" con animación de desplazamiento */
+.scroll-down {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 1;
+  animation: bounce 2s infinite 1s;
+}
+
+.scroll-down p {
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+  color: #7a7777;
+}
+
+.arrow {
+  width: 18px;
+  height: 18px;
+  border: 6px solid #7a7777;
+  border-width: 6px 6px 0 0;
+  transform: rotate(135deg);
+  animation: bounceArrow 1.5s infinite, blink 2s infinite; /* Nueva animación "blink" */
+}
+
+@keyframes blink {
+  0%,
+  50%,
+  100% {
+    opacity: 0;
+  }
+  25%,
+  75% {
+    opacity: 1;
+  }
+}
+
+/* Estilos para la sección de servicios */
+#servicios {
+  padding: 100px 0;
+  text-align: center;
+  background-color: #a0dff5;
+}
+
+.servicios-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.servicio {
+  width: calc(33.33% - 40px);
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+}
+
+.servicio:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.servicio img {
+  max-width: 80px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.servicio-title {
+  font-size: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 10px;
+  color: #000000;
+}
+
+.servicio-description {
+  font-size: 1rem;
+  font-family: sans-serif;
+  color: #666;
+}
+
+/* Estilos para el botón "Más Información" */
+.servicio .boton-mas-info {
+  display: block;
+  margin-top: 15px;
+  background-color: #143a4f72;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  text-align: center;
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.servicio .boton-mas-info:hover {
+  background-color: #009fe363;
+}
+
+/* Estilos para la información adicional */
+.info-imagen-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.info-imagen-content {
+  max-width: 100%;
+  max-height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.info-imagen-content img {
+  max-width: 32%;
+  max-height: 32%;
+  object-fit: contain;
+  border-bottom-right-radius: 4%;
+  border-bottom-left-radius: 4%;
+}
+
+.cerrar-info {
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  right: 10px;
+  font-size: 70px;
+  cursor: pointer;
+  color: rgb(148, 148, 148);
+}
+
+
+/* Estilos para la sección "Sobre Mí" */
+#sobre-mi {
+  background-color: #f7f7f7;
+  padding: 20px;
+  border-radius: 15px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  color: #000000;
+}
+
+.biografia {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nombre {
+  font-size: 36px;
+  font-weight: bold;
+  color: #a0dff5;
+  margin: 10px 0;
+}
+
+.colegiada {
+  color: #777;
+  font-size: 20px;
+}
+
+.formacion ul {
+  list-style: none;
+  padding: 0 0 0 30px;
+}
+
+.formacion ul li {
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: #555;
+}
+
+.trayectoria ul {
+  list-style: none;
+  padding: 0 0 0 30px;
+}
+
+.trayectoria ul li {
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: #555;
+}
+
+.biografia p:last-child {
+  font-style: italic;
+  margin-top: 30px;
+  font-size: 20px;
+  color: #777;
+}
+
+/* Estilos para la sección de "Precios" */
+#precios {
+  background-color: #a0dff5;
+  color: #ffffff;
+  padding: 100px 0;
+  text-align: center;
+  animation: fadeIn 1.5s ease;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.precio-carrusel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+/* Estilos para las tarjetas de precio */
+.tarjeta-precio {
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+  animation: fadeIn 1.5s ease;
+  animation-fill-mode: both;
+  opacity: 0;
+  color: #000000;
+  font-family: Arial, Helvetica, sans-serif;
+  width: calc(33.33% - 40px);
+}
+
+.tarjeta-precio:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.tarjeta-precio h3 {
+  font-size: 65px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  margin-bottom: 10px;
+  color: #000000;
+}
+
+.precio {
+  font-size: 60px;
+  font-weight: bold;
+  background-color: #143a4f72;
+  color: #fff;
+  border-radius: 10px;
+}
+
+/* Animación de entrada personalizada */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Estilos para la sección de "Contacto" */
+#contacto {
+  background-color: #f9f9f9;
+  text-align: center;
+  animation: fadeIn 1.5s ease;
+  margin: 2%;
+  padding: 40px; /* Espacio de relleno general */
+  display: flex;
+  flex-direction: row;  
+  gap: 40px;
+  margin-right: 5%;
+  margin-left: 5%; /* Margen izquierdo */
+  justify-content: space-between; /* Alinea los elementos a los extremos */
+}
+
+/* Estilos para el contenedor del mapa */
+.mapa-container {
+  flex: 1; /* Ocupa el 50% del espacio disponible */
+  text-align: center;
+}
+
+/* Estilos para el mapa de Leaflet */
+#map {
+  width: 100%;
+  height: 700px; /* Ajusta la altura según sea necesario */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para el contenedor de información */
+.informacion-container {
+  flex: 1; /* Ocupa el 50% del espacio disponible */
+  max-width: 50%; /* Limita a la mitad de la sección */
+  text-align: left;
+  margin-left: 5%;
+  margin-top: 8%;
+}
+
+
+/* Estilos para el título */
+.informacion-container h2 {
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 55px; /* Tamaño del título */
+  color: #a0dff5; /* Color azul */
+}
+
+/* Estilos para los subtítulos */
+.informacion-container p {
+  font-size: 20px;
+  font-family:Arial, Helvetica, sans-serif;
+  color: #555; /* Color de texto más oscuro */
+}
+
+/* Estilos para el contenedor de icono e información */
+.icono-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+/* Estilos para las imágenes de iconos */
+.icono-info img {
+  width: 20px; /* Ajusta el tamaño según sea necesario */
+  margin-right: 10px;
+}
+
+/* Estilos para los párrafos de información */
+.icono-info p {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #333; /* Color de texto oscuro */
+}
+
+/* Estilos para el botón de contacto */
+.btn-contactar {
+  background-color: #a0dff5;
+  color: #fff;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-contactar:hover {
+  background-color: #5a96ab;
+}
+
+
+
+/* Estilos para el pie de página (footer) */
+footer {
+  background-color: #333; /* Fondo oscuro */
+  color: #fff; /* Texto blanco */
+  text-align: center;
+  padding: 20px 0;
+  font-size: 16px;
+}
+
+/* Estilos para el texto de copyright */
+.copyright {
+  font-style: italic;
+  opacity: 0.8;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 768px) {
+  nav ul {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 15px 0;
+  }
+
+  .logo img {
+    max-width: 80px;
+  }
+
+  /* Otras reglas de estilo para dispositivos móviles */
+  /* ... */
+}

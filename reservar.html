@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reserva tu cita</title>
+  <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="./reservar.css" />
+</head>
+
+<body>
+  <section id="reserva-cita" class="section-light">
+    <div class="reserva-container">
+      <h2>Reserva de Cita</h2>
+      <p>¡Reserva tu cita con MarinaParcha ahora mismo!</p>
+      <form>
+        <label for="fecha">Fecha:</label>
+        <input type="date" id="fecha" name="fecha"  />
+
+        <label for="hora">Hora:</label>
+        <input type="time" id="hora" name="hora"  />
+
+        <label for="servicio">Servicio:</label>
+        <select id="servicio" name="servicio" >
+          <option value="inyectables">Inyectables</option>
+          <option value="cura-quirurgica">Cura de Herida Quirúrgica</option>
+          <option value="toma-constantes">Toma de Constantes</option>
+          <option value="formacion">Formación</option>
+          <option value="otros-servicios">Otros Servicios</option>
+        </select>
+
+        <label for="comentarios">Comentarios adicionales:</label>
+        <textarea id="comentarios" name="comentarios" rows="4"></textarea>
+
+        <button type="submit">Reservar Cita</button>
+        <a href="index.html" class="link-button">Volver al Inicio</a>      </form>
+    </div>
+  </section>
+
+</body>
+
+</html>
