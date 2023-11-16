@@ -129,10 +129,30 @@ h2 {
 }
 
 .intro-content h1 {
-  font-family: "Times New Roman", Times, serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 148px;
   margin-bottom: 10px;
-  animation: fadeInUp 1s ease; /* Agrega una animación de entrada */
+  animation: fadeInUp 5s ease, titleAnimation 20s ease-in-out infinite; /* Agrega la animación de entrada y la animación personalizada */
+}
+
+@keyframes fadeInUp {
+  0% {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes titleAnimation {
+  0%, 100% {
+      color: #333; /* Color inicial y final */
+  }
+  50% {
+      color: #a0dff5; /* Color a la mitad del ciclo */
+  }
 }
 
 .intro-content p {
@@ -427,13 +447,9 @@ h2 {
   background-color: #f9f9f9;
   text-align: center;
   animation: fadeIn 1.5s ease;
-  margin: 2%;
-  padding: 40px; /* Espacio de relleno general */
   display: flex;
   flex-direction: row;  
   gap: 40px;
-  margin-right: 5%;
-  margin-left: 5%; /* Margen izquierdo */
   justify-content: space-between; /* Alinea los elementos a los extremos */
 }
 
@@ -455,8 +471,6 @@ h2 {
   flex: 1; /* Ocupa el 50% del espacio disponible */
   max-width: 50%; /* Limita a la mitad de la sección */
   text-align: left;
-  margin-left: 5%;
-  margin-top: 8%;
 }
 
 
