@@ -675,17 +675,19 @@ footer {
 
   /* Estilos para la sección de Inicio en dispositivos móviles */
   #inicio {
-    background-size: contain;
-    height: auto;
+    background-size:cover;
+    background-image: url(./Assets/background-mobile.jpg);
     min-height: 100vh;
   }
 
   .intro-container {
     padding: 15px;
+    max-height: max-content;
+    height: 500px;
   }
 
   .intro-content h1 {
-    font-size: 3.3rem;
+    font-size: 3.8rem;
   }
   .intro-content p {
     font-size: 17px;
@@ -694,6 +696,7 @@ footer {
     font-size: 15px;
   }
   .scroll-down .arrow {
+    
     width: 12px;
     height: 12px;
   }
