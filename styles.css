@@ -692,6 +692,9 @@ footer {
   .intro-content p {
     font-size: 17px;
   }
+  .scroll-down{
+    top: 150px;
+  }
   .scroll-down p {
     font-size: 15px;
   }
