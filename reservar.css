@@ -31,7 +31,6 @@
   border-radius: 5px;
 }
 
-/* Change color when hovering over the link */
 .link-button:hover {
   background-color: #2980b9;
 }

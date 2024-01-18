@@ -26,239 +26,264 @@
 
       <nav>
         <ul>
-          <li><a href="#inicio">INICIO</a></li>
-          <li><a href="#servicios">SERVICIOS</a></li>
-          <li><a href="#sobre-mi">SOBRE MI</a></li>
-          <li><a href="#precios">PRECIOS</a></li>
-          <li><a href="#contacto">CONTACTO</a></li>
+          <li><a href="#inicio" class="underline">INICIO</a></li>
+          <li><a href="#servicios" class="underline">SERVICIOS</a></li>
+          <li><a href="#sobre-mi" class="underline">SOBRE MI</a></li>
+          <li><a href="#precios" class="underline">PRECIOS</a></li>
+          <li><a href="#contacto" class="underline">CONTACTO</a></li>
         </ul>
       </nav>
+      <!-- Toggle para el menú en dispositivos móviles -->
+      <div class="menu-toggle" id="mobile-menu-toggle">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+
+      <!-- Menú desplegable para dispositivos móviles -->
+      <div class="mobile-menu" id="mobile-menu">
+        <nav>
+          <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#sobre-mi">Sobre Mí</a></li>
+            <li><a href="#precios">Precios</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
+    <main>
+      <section id="inicio">
+        <div class="intro-container">
+          <div class="intro-content">
+            <h1>MarinaParcha</h1>
+            <p>Tu enfermera a domicilio en Cantabria</p>
+          </div>
+          <div class="scroll-down">
+            <p>Desliza para explorar</p>
+            <div class="arrow"></div>
+          </div>
+          <div class="reservar-btn-container">
+            <a href="register.html" class="reservar-btn"
+              >Reserva tu cita ahora</a
+            >
+          </div>
+        </div>
+      </section>
 
-    <section id="inicio">
-      <div class="intro-container">
-        <div class="intro-content">
-          <h1>MarinaParcha</h1>
-          <p>Enfermera a domicilio en Cantabria</p>
+      <section id="servicios" class="section-dark">
+        <div class="section-title">
+          <h2>Servicios</h2>
         </div>
-        <div class="scroll-down">
-          <p>Desliza para explorar</p>
-          <div class="arrow"></div>
+        <div class="servicios-container">
+          <div class="servicio">
+            <img src="./Assets/inyeccion.png" alt="Icono de inyecciones" />
+            <h3 class="servicio-title">Inyectables</h3>
+            <p class="servicio-description">
+              Aplicación de inyecciones con cuidado y precisión.
+            </p>
+            <a href="#" class="boton-mas-info" data-target="servicio1-info"
+              >Más Información</a
+            >
+          </div>
+          <div class="servicio">
+            <img
+              src="./Assets/herida-quirurjica.png"
+              alt="Icono de cura de heridas"
+            />
+            <h3 class="servicio-title">Cura de Herida Quirúrgica</h3>
+            <p class="servicio-description">
+              Tratamiento y cura de heridas con técnicas avanzadas.
+            </p>
+            <a href="#" class="boton-mas-info" data-target="servicio2-info"
+              >Más Información</a
+            >
+          </div>
+          <div class="servicio">
+            <img
+              src="./Assets/herida-cronica.png"
+              alt="Icono de cura de herida crónica"
+            />
+            <h3 class="servicio-title">Cura de Herida Crónica</h3>
+            <p class="servicio-description">
+              Evaluación y tratamiento de heridas crónicas.
+            </p>
+            <a href="#" class="boton-mas-info" data-target="servicio3-info"
+              >Más Información</a
+            >
+          </div>
+          <div class="servicio">
+            <img
+              src="./Assets/constantes.png"
+              alt="Icono de toma de constantes"
+            />
+            <h3 class="servicio-title">Toma de Constantes</h3>
+            <p class="servicio-description">
+              Monitorización y registro de constantes vitales.
+            </p>
+            <a href="#" class="boton-mas-info" data-target="servicio4-info"
+              >Más Información</a
+            >
+          </div>
+          <div class="servicio">
+            <img src="./Assets/formacion.png" alt="Icono de formación" />
+            <h3 class="servicio-title">Formación</h3>
+            <p class="servicio-description">
+              Clases y capacitación en temas de salud y enfermería.
+            </p>
+            <a href="#" class="boton-mas-info" data-target="servicio5-info"
+              >Más Información</a
+            >
+          </div>
+          <div class="servicio">
+            <img
+              src="./Assets/otros-servicios.png"
+              alt="Icono de otros servicios"
+            />
+            <h3 class="servicio-title">Otros Servicios</h3>
+            <p class="servicio-description">
+              Servicios adicionales para el cuidado y bienestar de los
+              pacientes.
+            </p>
+            <a href="#" class="boton-mas-info" data-target="servicio6-info"
+              >Más Información</a
+            >
+          </div>
         </div>
-        <div class="reservar-btn-container">
-          <a href="reservar.html" class="reservar-btn">Reserva tu cita ahora</a>
-        </div>
-      </div>
-    </section>
-    
+      </section>
 
-    <section id="servicios" class="section-dark">
-      <div class="section-title">
-        <h2>Servicios</h2>
-      </div>
-      <div class="servicios-container">
-        <div class="servicio">
-          <img src="./Assets/inyeccion.png" alt="Icono de inyecciones" />
-          <h3 class="servicio-title">Inyectables</h3>
-          <p class="servicio-description">
-            Aplicación de inyecciones con cuidado y precisión.
-          </p>
-          <a href="#" class="boton-mas-info" data-target="servicio1-info"
-            >Más Información</a
-          >
-        </div>
-        <div class="servicio">
-          <img
-            src="./Assets/herida-quirurjica.png"
-            alt="Icono de cura de heridas"
-          />
-          <h3 class="servicio-title">Cura de Herida Quirúrgica</h3>
-          <p class="servicio-description">
-            Tratamiento y cura de heridas con técnicas avanzadas.
-          </p>
-          <a href="#" class="boton-mas-info" data-target="servicio2-info"
-            >Más Información</a
-          >
-        </div>
-        <div class="servicio">
-          <img
-            src="./Assets/herida-cronica.png"
-            alt="Icono de cura de herida crónica"
-          />
-          <h3 class="servicio-title">Cura de Herida Crónica</h3>
-          <p class="servicio-description">
-            Evaluación y tratamiento de heridas crónicas.
-          </p>
-          <a href="#" class="boton-mas-info" data-target="servicio3-info"
-            >Más Información</a
-          >
-        </div>
-        <div class="servicio">
-          <img
-            src="./Assets/constantes.png"
-            alt="Icono de toma de constantes"
-          />
-          <h3 class="servicio-title">Toma de Constantes</h3>
-          <p class="servicio-description">
-            Monitorización y registro de constantes vitales.
-          </p>
-          <a href="#" class="boton-mas-info" data-target="servicio4-info"
-            >Más Información</a
-          >
-        </div>
-        <div class="servicio">
-          <img src="./Assets/formacion.png" alt="Icono de formación" />
-          <h3 class="servicio-title">Formación</h3>
-          <p class="servicio-description">
-            Clases y capacitación en temas de salud y enfermería.
-          </p>
-          <a href="#" class="boton-mas-info" data-target="servicio5-info"
-            >Más Información</a
-          >
-        </div>
-        <div class="servicio">
-          <img
-            src="./Assets/otros-servicios.png"
-            alt="Icono de otros servicios"
-          />
-          <h3 class="servicio-title">Otros Servicios</h3>
-          <p class="servicio-description">
-            Servicios adicionales para el cuidado y bienestar de los pacientes.
-          </p>
-          <a href="#" class="boton-mas-info" data-target="servicio6-info"
-            >Más Información</a
-          >
+      <!-- Información adicional para cada servicio -->
+      <div class="info-imagen-overlay" id="info-overlay">
+        <div class="info-imagen-content">
+          <img id="info-imagen" src="" alt="Información adicional" />
+          <span class="cerrar-info" id="cerrar-info">&times;</span>
         </div>
       </div>
-    </section>
-    
-    <!-- Información adicional para cada servicio -->
-    <div class="info-imagen-overlay" id="info-overlay">
-      <div class="info-imagen-content">
-        <img id="info-imagen" src="" alt="Información adicional" />
-        <span class="cerrar-info" id="cerrar-info">&times;</span>
-      </div>
-    </div>
 
-    <section id="sobre-mi" class="section-light">
-      <div class="biografia">
-        <h2 class="nombre">Marina González Parcha</h2>
-        <p class="colegiada">Colegiada n° A8280</p>
-        <div class="formacion">
-          <h3>Formación destacada</h3>
-          <ul>
-            <li>
-              2010-2014<br />Grado en Enfermería.<br />Universidad San Pablo CEU
-              de Madrid.
-            </li>
-            <li>
-              2014-2015<br />Experto Universitario: "Enfermería en los Cuidados
-              Críticos".<br />Escuela Internacional de Ciencias de la Salud y
-              Universidad a Distancia de Madrid (UDIMA)
-            </li>
-            <li>
-              2021<br />Especialista Universitario en Liderazgo y Dirección de
-              personas en el Ámbito sanitario.<br />Universidad Internacional de
-              la Rioja (UNIR).
-            </li>
-            <li>
-              2021-2022<br />Máster Universitario en Dirección y Gestión de
-              Unidades de Enfermería.<br />Universidad Internacional de la Rioja
-              (UNIR).
-            </li>
-            <li>
-              Próximamente<br />2023<br />Actualización online en vía
-              intramuscular para enfermería.
-            </li>
-            <li>
-              2023-2024<br />Diploma Universitario de Especialización "Cuidados
-              y Curas de Heridas Crónicas".<br />Universidad de Cantabria.
-            </li>
-          </ul>
+      <section id="sobre-mi" class="section-light">
+        <div class="biografia">
+          <h2 class="nombre">Marina González Parcha</h2>
+          <p class="colegiada">Colegiada n° A8280</p>
+          <div class="formacion">
+            <h3>Formación destacada</h3>
+            <ul>
+              <li>
+                2010-2014<br />Grado en Enfermería.<br />Universidad San Pablo
+                CEU de Madrid.
+              </li>
+              <li>
+                2014-2015<br />Experto Universitario: "Enfermería en los
+                Cuidados Críticos".<br />Escuela Internacional de Ciencias de la
+                Salud y Universidad a Distancia de Madrid (UDIMA)
+              </li>
+              <li>
+                2021<br />Especialista Universitario en Liderazgo y Dirección de
+                personas en el Ámbito sanitario.<br />Universidad Internacional
+                de la Rioja (UNIR).
+              </li>
+              <li>
+                2021-2022<br />Máster Universitario en Dirección y Gestión de
+                Unidades de Enfermería.<br />Universidad Internacional de la
+                Rioja (UNIR).
+              </li>
+              <li>
+                Próximamente<br />2023<br />Actualización online en vía
+                intramuscular para enfermería.
+              </li>
+              <li>
+                2023-2024<br />Diploma Universitario de Especialización
+                "Cuidados y Curas de Heridas Crónicas".<br />Universidad de
+                Cantabria.
+              </li>
+            </ul>
+          </div>
+          <div class="trayectoria">
+            <h3>Trayectoria Profesional</h3>
+            <ul>
+              <li>
+                Desde julio de 2014 hasta la actualidad prácticamente he
+                desarrollado mi vida laboral en Unidades de Cuidados Intensivos.
+                Comencé trabajando en Madrid, en el Hospital Universitario HM
+                Montepríncipe, junto con el Hospital General Collado Villalba.
+                Después en 2016 volví a mi tierra, a Cantabria donde comencé a
+                trabajar en diversos ámbitos como consultas de Atención
+                Primaria, el Servicio de Urgencias de Atención Primaria (SUAP),
+                Urgencias hospitalarias, y vuelta a la Unidad de Cuidados
+                Intensivos a la que pertenezco en la actualidad.
+              </li>
+              <li>
+                Por otro lado, también he desarrollado mi actividad laboral como
+                enfermera de empresa y como enfermera de extracciones en otras
+                empresas del ámbito privado.
+              </li>
+            </ul>
+          </div>
+          <p>
+            Si quieres conocer más sobre mí, no dudes en pedir mi CV completo en
+            el contacto de la consulta.
+          </p>
         </div>
-        <div class="trayectoria">
-          <h3>Trayectoria Profesional</h3>
-          <ul>
-            <li>
-              Desde julio de 2014 hasta la actualidad prácticamente he
-              desarrollado mi vida laboral en Unidades de Cuidados Intensivos.
-              Comencé trabajando en Madrid, en el Hospital Universitario HM
-              Montepríncipe, junto con el Hospital General Collado Villalba.
-              Después en 2016 volví a mi tierra, a Cantabria donde comencé a
-              trabajar en diversos ámbitos como consultas de Atención Primaria,
-              el Servicio de Urgencias de Atención Primaria (SUAP), Urgencias
-              hospitalarias, y vuelta a la Unidad de Cuidados Intensivos a la
-              que pertenezco en la actualidad.
-            </li>
-            <li>
-              Por otro lado, también he desarrollado mi actividad laboral como
-              enfermera de empresa y como enfermera de extracciones en otras
-              empresas del ámbito privado.
-            </li>
-          </ul>
+      </section>
+      <section id="precios" class="section-dark">
+        <div class="section-title">
+          <h2>Precios</h2>
         </div>
-        <p>
-          Si quieres conocer más sobre mí, no dudes en pedir mi CV completo en
-          el contacto de la consulta.
-        </p>
-      </div>
-    </section>
-    <section id="precios" class="section-dark">
-      <div class="section-title">
-        <h2>Precios</h2>
-      </div>
-      <div class="precio-carrusel">
-        <div class="tarjeta-precio">
-          <h3>Inyectables y dosis desde</h3>
-          <p class="precio">10€</p>
-          <p>Administración de inyecciones y medicamentos.</p>
+        <div class="precio-carrusel">
+          <div class="tarjeta-precio">
+            <h3>Inyectables y dosis desde</h3>
+            <p class="precio">10€</p>
+            <p>Administración de inyecciones y medicamentos.</p>
+          </div>
+          <div class="tarjeta-precio">
+            <h3>Cura de Herida Quirúrgica desde</h3>
+            <p class="precio">15€</p>
+            <p>Cuidado y curación de heridas quirúrgicas.</p>
+          </div>
+          <div class="tarjeta-precio">
+            <h3>Bono de 5 Inyectables desde</h3>
+            <p class="precio">40€</p>
+            <p>Pack de 5 inyecciones a un precio reducido.</p>
+          </div>
+          <div class="tarjeta-precio">
+            <h3>Bono de 5 Curas Quirúrgicas desde</h3>
+            <p class="precio">65€</p>
+            <p>Pack de 5 curas de heridas quirúrgicas a un precio especial.</p>
+          </div>
+          <div class="tarjeta-precio">
+            <h3>Cura de Heridas Crónicas desde</h3>
+            <p class="precio">Preevaluación</p>
+            <p>Evaluación y tratamiento de heridas crónicas.</p>
+          </div>
         </div>
-        <div class="tarjeta-precio">
-          <h3>Cura de Herida Quirúrgica desde</h3>
-          <p class="precio">15€</p>
-          <p>Cuidado y curación de heridas quirúrgicas.</p>
-        </div>
-        <div class="tarjeta-precio">
-          <h3>Bono de 5 Inyectables desde</h3>
-          <p class="precio">40€</p>
-          <p>Pack de 5 inyecciones a un precio reducido.</p>
-        </div>
-        <div class="tarjeta-precio">
-          <h3>Bono de 5 Curas Quirúrgicas desde</h3>
-          <p class="precio">65€</p>
-          <p>Pack de 5 curas de heridas quirúrgicas a un precio especial.</p>
-        </div>
-        <div class="tarjeta-precio">
-          <h3>Cura de Heridas Crónicas desde</h3>
-          <p class="precio">Preevaluación</p>
-          <p>Evaluación y tratamiento de heridas crónicas.</p>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="contacto" class="section-light">
-      <div class="mapa-container">
-        <!-- Mapa de Leaflet -->
-        <div id="map"></div>
-      </div>
-      <div class="informacion-container">
-        <h2>Trabajo en toda la comunidad de Cantabria</h2>
-        <p>Si vives en la Comunidad de Cantabria, llámame y me trasladaré a tu domicilio lo antes posible.</p>
-        <div class="icono-info">
-          <img src="./Assets/icon-telefono.png" alt="Icono Teléfono" />
-          <p>616839310</p>
+      <section id="contacto" class="section-light">
+        <div class="mapa-container">
+          <!-- Mapa de Leaflet -->
+          <div id="map"></div>
         </div>
-        <div class="icono-info">
-          <img src="./Assets/icon-correo.png" alt="Icono Correo Electrónico" />
-          <p>marinaparcha@gmail.com</p>
+        <div class="informacion-container">
+          <h2>Trabajo en toda la comunidad de Cantabria</h2>
+          <p>
+            Si vives en la Comunidad de Cantabria, llámame y me trasladaré a tu
+            domicilio lo antes posible.
+          </p>
+          <div class="icono-info">
+            <img src="./Assets/icon-telefono.png" alt="Icono Teléfono" />
+            <p>616839310</p>
+          </div>
+          <div class="icono-info">
+            <img
+              src="./Assets/icon-correo.png"
+              alt="Icono Correo Electrónico"
+            />
+            <p>marinaparcha@gmail.com</p>
+          </div>
+          <button class="btn-contactar">Contactar</button>
         </div>
-        <button class="btn-contactar">Contactar</button>
-      </div>
-    </section>
-    
-    
-    
-
+      </section>
+    </main>
     <footer>
       <div class="copyright">
         <p>&copy; 2023 Marina Parcha. Todos los derechos reservados.</p>
