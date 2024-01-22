@@ -51,11 +51,11 @@ document.addEventListener("DOMContentLoaded", function () {
             entry.target.id === "sobre-mi" ||
             entry.target.id === "contacto"
           ) {
-            logo.src = "./Assets/logo_blanco.jpg"; // Cambiar a la versión de logo claro
+            logo.src = "./Assets/logo_blanco.png"; // Cambiar a la versión de logo claro
             header.classList.remove("dark-header");
             navLinks.forEach((link) => link.classList.remove("light-link")); // Remover estilo de enlaces claros
           } else {
-            logo.src = "./Assets/logo_negro.jpg"; // Cambiar a la versión de logo oscuro
+            logo.src = "./Assets/logo_negro.png"; // Cambiar a la versión de logo oscuro
             header.classList.add("dark-header");
             navLinks.forEach((link) => link.classList.add("light-link")); // Agregar estilo de enlaces claros
           }
