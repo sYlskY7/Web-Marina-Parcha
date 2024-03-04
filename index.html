@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Enfermera a Domicilio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+</head>
+
+<body class="font-sans bg-gray-300">
+
+    <!-- Encabezado con Logo y Navbar -->
+    <!-- Navbar Fijo con Animación -->
+    <header class="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
+        <div class="container mx-auto flex items-center justify-between p-4">
+            <!-- Logo a la izquierda -->
+            <div class="flex items-center space-x-4">
+                <img src="ruta_del_logo.png" alt="Logo" class="w-8 h-8">
+                <span class="text-xl font-semibold text-gray-800">Enfermera a Domicilio</span>
+            </div>
+            <!-- Navbar a la derecha -->
+            <nav class="flex items-center space-x-4">
+                <a href="#inicio" class="text-gray-800 hover:text-custom font-semibold">INICIO</a>
+                <a href="#servicios" class="text-gray-800 hover:text-custom font-semibold">SERVICIOS</a>
+                <a href="#sobre-mi" class="text-gray-800 hover:text-custom font-semibold">SOBRE MI</a>
+                <a href="#precios" class="text-gray-800 hover:text-custom font-semibold">PRECIOS</a>
+                <a href="#contacto" class="text-gray-800 hover:text-custom font-semibold">CONTACTO</a>
+            </nav>
+        </div>
+    </header>
+    <!-- Sección de Inicio -->
+    <section id="inicio" class="aos-init aos-animate py-32 bg-cover bg-center relative"
+        style="background-image: url('https://via.placeholder.com/1600x1200');">
+        <div class="absolute inset-0 bg-black opacity-40"></div>
+        <div class="container mx-auto text-center relative z-10" data-aos="fade-up">
+            <h2 class="text-6xl font-bold text-white mb-4">Cuidado de Salud Personalizado</h2>
+            <p class="text-2xl text-gray-300 mb-8" data-aos="fade-up" data-aos-delay="200">Proporcionamos servicios de
+                enfermería a domicilio adaptados a tus necesidades.</p>
+            <a href="#servicios"
+                class="bg-white text-custom py-3 px-8 rounded-full uppercase tracking-wide font-semibold hover:bg-gray-200 transition duration-300"
+                data-aos="fade-up" data-aos-delay="400">Descubre más</a>
+        </div>
+    </section>
+
+
+    <!-- Sección de Servicios -->
+    <section id="servicios" class="aos-init aos-animate py-12">
+        <div class="container mx-auto" data-aos="fade-up">
+            <h2 class="text-4xl font-bold text-center mb-8">Nuestros Servicios</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Servicio 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="200">
+                    <img src="ruta_del_icono_1.png" alt="Servicio 1" class="mb-4 rounded-lg">
+                    <h3 class="text-xl font-bold mb-2">Servicio 1</h3>
+                    <p class="text-gray-700">Descripción del Servicio 1.</p>
+                    <a href="#" class="text-custom font-semibold hover:underline">Más Información</a>
+                </div>
+
+                <!-- Servicio 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="400">
+                    <img src="ruta_del_icono_2.png" alt="Servicio 2" class="mb-4 rounded-lg">
+                    <h3 class="text-xl font-bold mb-2">Servicio 2</h3>
+                    <p class="text-gray-700">Descripción del Servicio 2.</p>
+                    <a href="#" class="text-custom font-semibold hover:underline">Más Información</a>
+                </div>
+
+                <!-- Servicio 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="600">
+                    <img src="ruta_del_icono_3.png" alt="Servicio 3" class="mb-4 rounded-lg">
+                    <h3 class="text-xl font-bold mb-2">Servicio 3</h3>
+                    <p class="text-gray-700">Descripción del Servicio 3.</p>
+                    <a href="#" class="text-custom font-semibold hover:underline">Más Información</a>
+                </div>
+
+                <!-- Servicio 4 -->
+                <div class="bg-white p-6 rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="800">
+                    <img src="ruta_del_icono_4.png" alt="Servicio 4" class="mb-4 rounded-lg">
+                    <h3 class="text-xl font-bold mb-2">Servicio 4</h3>
+                    <p class="text-gray-700">Descripción del Servicio 4.</p>
+                    <a href="#" class="text-custom font-semibold hover:underline">Más Información</a>
+                </div>
+
+                <!-- Servicio 5 -->
+                <div class="bg-white p-6 rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="1000">
+                    <img src="ruta_del_icono_5.png" alt="Servicio 5" class="mb-4 rounded-lg">
+                    <h3 class="text-xl font-bold mb-2">Servicio 5</h3>
+                    <p class="text-gray-700">Descripción del Servicio 5.</p>
+                    <a href="#" class="text-custom font-semibold hover:underline">Más Información</a>
+                </div>
+
+                <!-- Servicio 6 -->
+                <div class="bg-white p-6 rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="1200">
+                    <img src="ruta_del_icono_6.png" alt="Servicio 6" class="mb-4 rounded-lg">
+                    <h3 class="text-xl font-bold mb-2">Servicio 6</h3>
+                    <p class="text-gray-700">Descripción del Servicio 6.</p>
+                    <a href="#" class="text-custom font-semibold hover:underline">Más Información</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Sección Sobre Mí -->
+    <section id="sobre-mi" class="aos-init aos-animate py-16">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-semibold text-gray-800 mb-8" data-aos="fade-up">Sobre Mí</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Información Personal -->
+                <div data-aos="fade-right" class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Información Personal</h3>
+                    <p class="text-gray-700 mb-4">¡Hola! Soy [Tu Nombre], una apasionada enfermera con el deseo
+                        constante
+                        de proporcionar cuidados de calidad. Mi compromiso y experiencia son mis mayores activos.</p>
+                </div>
+
+                <!-- Formación Destacada -->
+                <div data-aos="fade-up" class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Formación Destacada</h3>
+                    <ul class="list-disc list-inside text-gray-700">
+                        <li>2010-2014: Grado en Enfermería - Universidad San Pablo CEU de Madrid.</li>
+                        <li>2014-2015: Experto Universitario: "Enfermería en los Cuidados Críticos" - Escuela
+                            Internacional de Ciencias de la Salud y Universidad a Distancia de Madrid (UDIMA).</li>
+                        <!-- Repetir para otras formaciones -->
+                    </ul>
+                </div>
+
+                <!-- Trayectoria Profesional -->
+                <div data-aos="fade-left" class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Trayectoria Profesional</h3>
+                    <ul class="list-disc list-inside text-gray-700">
+                        <li>Desde julio de 2014 hasta la actualidad, he desarrollado mi carrera en Unidades de Cuidados
+                            Intensivos. Comencé en Madrid, en el Hospital Universitario HM Montepríncipe y el Hospital
+                            General Collado Villalba.</li>
+                        <li>También he trabajado como enfermera de empresa y en extracciones en empresas del ámbito
+                            privado.
+                        </li>
+                        <!-- Repetir para otras experiencias -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Precios -->
+    <section id="precios" class="aos-init aos-animate py-16">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-semibold text-gray-800 mb-8" data-aos="fade-up">Nuestros Precios</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Tarjeta de Precio -->
+                <div class="bg-white p-6 rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Inyectables y dosis</h3>
+                    <p class="text-gray-600 mb-4">Desde 10€</p>
+                    <p class="text-gray-700 mb-4">Administración de inyecciones y medicamentos.</p>
+                    <button class="bg-blue-500 text-white px-4 py-2 rounded-full">Solicitar</button>
+                </div>
+
+                <!-- Repetir para otros precios -->
+
+                <!-- Tarjeta de Precio -->
+                <div class="bg-white p-6 rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="400">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Consulta a domicilio</h3>
+                    <p class="text-gray-600 mb-4">50€</p>
+                    <p class="text-gray-700 mb-4">Consulta privada en la comodidad de tu hogar.</p>
+                    <button class="bg-blue-500 text-white px-4 py-2 rounded-full">Solicitar</button>
+                </div>
+
+                <!-- Repetir para otros precios -->
+
+                <!-- Tarjeta de Precio -->
+                <div class="bg-white p-6 rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="600">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Cura de Herida Quirúrgica</h3>
+                    <p class="text-gray-600 mb-4">Desde 15€</p>
+                    <p class="text-gray-700 mb-4">Cuidado y curación de heridas quirúrgicas.</p>
+                    <button class="bg-blue-500 text-white px-4 py-2 rounded-full">Solicitar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section id="contacto" class="aos-init aos-animate py-12 text-white">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-8" data-aos="fade-up">Contáctanos</h2>
+            <p class="text-xl mb-8" data-aos="fade-up" data-aos-delay="200">Estamos aquí para responder a tus preguntas
+                y proporcionar la atención que
+                necesitas.
+            </p>
+            <a href="#"
+                class="text-custom py-2 px-6 rounded-full uppercase tracking-wide font-semibold hover:bg-gray-200 transition duration-300"
+                data-aos="fade-up" data-aos-delay="400">Contáctanos</a>
+        </div>
+    </section>
+
+    <!-- Pie de Página -->
+    <footer class="bg-gray-800 text-white text-center py-4">
+        <p>&copy; 2024 MarinaParcha - Enfermera a Domicilio</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
