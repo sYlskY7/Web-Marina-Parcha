@@ -22,3 +22,13 @@ CREATE TABLE Cita (
     notas TEXT,
     FOREIGN KEY (idCliente) REFERENCES Cliente(idCliente)
 );
+
+-- Crear tabla de usuarios
+CREATE TABLE Usuario (
+    idUsuario INT PRIMARY KEY AUTO_INCREMENT,
+    idCliente INT,
+    nombreUsuario VARCHAR(50) NOT NULL,
+    contrasena VARCHAR(100) NOT NULL,
+    UNIQUE (nombreUsuario),  -- Asegura que los nombres de usuario sean únicos
+    FOREIGN KEY (idCliente) REFERENCES Cliente(idCliente)
+);
