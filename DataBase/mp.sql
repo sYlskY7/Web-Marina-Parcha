@@ -1,3 +1,4 @@
+DROP DATABASE IF EXISTS MP;
 -- Crear la base de datos
 CREATE DATABASE IF NOT EXISTS MP;
 
