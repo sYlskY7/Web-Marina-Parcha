@@ -18,31 +18,36 @@
     <header class="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
         <div class="container mx-auto flex items-center justify-between p-4">
             <!-- Logo a la izquierda -->
-            <div class="flex items-center space-x-4">
-                <img src="ruta_del_logo.png" alt="Logo" class="w-8 h-8">
-                <span class="text-xl font-semibold text-gray-800">Enfermera a Domicilio</span>
+            <div class="">
+                <img src="./Assets/Images/logo.png" alt="Logo" class="w-16 h-12">
             </div>
             <!-- Navbar a la derecha -->
             <nav class="flex items-center space-x-4">
                 <a href="#inicio"
                     class="text-gray-800 hover:text-custom hover:underline font-semibold transition duration-300 flex items-center">
-                    <i class="fas fa-home mr-1"></i> INICIO
+                    INICIO
                 </a>
                 <a href="#servicios"
                     class="text-gray-800 hover:text-custom hover:underline font-semibold transition duration-300 flex items-center">
-                    <i class="fas fa-medkit mr-1"></i> SERVICIOS
+                    SERVICIOS
                 </a>
                 <a href="#sobre-mi"
                     class="text-gray-800 hover:text-custom hover:underline font-semibold transition duration-300 flex items-center">
-                    <i class="fas fa-user mr-1"></i> SOBRE MI
+                    SOBRE MI
                 </a>
                 <a href="#precios"
                     class="text-gray-800 hover:text-custom hover:underline font-semibold transition duration-300 flex items-center">
-                    <i class="fas fa-dollar-sign mr-1"></i> PRECIOS
+                    PRECIOS
                 </a>
                 <a href="#contacto"
                     class="text-gray-800 hover:text-custom hover:underline font-semibold transition duration-300 flex items-center">
-                    <i class="fas fa-envelope mr-1"></i> CONTACTO
+                    CONTACTO
+                </a>
+
+                <!-- Nuevo enlace para iniciar sesión -->
+                <a href="#iniciar-sesion"
+                    class="text-gray-800 hover:text-custom hover:underline font-semibold transition duration-300 flex items-center">
+                    <i class="fas fa-sign-in-alt mr-1"></i> INICIAR SESIÓN
                 </a>
             </nav>
         </div>
@@ -50,68 +55,101 @@
 
 
     <!-- Sección de Inicio -->
-    <section id="inicio" class="aos-init aos-animate py-32 bg-cover bg-center relative"
+    <section id="inicio" class="aos-init aos-animate min-h-screen bg-cover bg-center relative"
         style="background-image: url('https://via.placeholder.com/1600x1200');">
-        <div class="absolute inset-0 bg-black opacity-40"></div>
-        <div class="container mx-auto text-center relative z-10" data-aos="fade-up">
-            <h2 class="text-6xl font-bold text-white mb-4">Cuidado de Salud Personalizado</h2>
-            <p class="text-2xl text-gray-300 mb-8" data-aos="fade-up" data-aos-delay="200">Proporcionamos servicios a domicilio en Cantabria</p>
-            <a href="#servicios"
-                class="bg-white text-custom py-3 px-8 rounded-full uppercase tracking-wide font-semibold hover:bg-gray-200 transition duration-300"
-                data-aos="fade-up" data-aos-delay="400">Descubre más</a>
+        <div class="absolute inset-0 bg-black opacity-60"></div>
+        <div class="container mx-auto flex flex-col items-center justify-center h-full relative z-10 text-center mt-20">
+            <h2 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4 mt-20" data-aos="fade-up">Marina
+                Parcha</h2>
+            <p class="text-lg md:text-2xl text-gray-300 mb-8" data-aos="fade-up" data-aos-delay="200">Los cuidados
+                médicos que necesitas a domicilio</p>
+            <div class="flex flex-col items-center space-y-6" data-aos="fade-up" data-aos-delay="400">
+                <a href="#servicios"
+                    class="bg-custom-primary text-white py-3 px-8 rounded-full uppercase tracking-wide font-semibold border-2 border-white transition duration-300 transform hover:scale-105 hover:bg-white hover:text-black">Reserva
+                    tu cita ahora</a>
+            </div>
+            <div class="mt-72 flex flex-col items-center">
+                <p class="text-white">¿Quieres saber más?</p>
+                <div class="animate-bounce ml-2">
+                    <a href="#servicios" class="text-custom-primary hover:text-custom-hover transition duration-300">
+                        <i class="fas fa-chevron-down text-white text-xl"></i>
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
+
     <div class="mx-16" style="overflow-x: hidden;">
         <!-- Sección de Servicios -->
-        <section id="servicios" class="aos-init aos-animate py-12">
-            <div class="container mx-auto" data-aos="fade-up">
-                <h2 class="text-4xl font-bold text-center mb-8">Nuestros Servicios</h2>
+        <section id="servicios" class="py-16">
+            <div class="container mx-auto">
+                <h2 class="text-4xl font-bold text-center mb-8" data-aos="fade-up">Nuestros Servicios</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Servicio 1 -->
-                    <div class="bg-white p-6 rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="200">
-                        <i class="fas fa-heartbeat text-5xl text-custom mb-4"></i>
+                    <div class="bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105"
+                        data-aos="fade-up" data-aos-delay="100">
+                        <i class="fas fa-heartbeat text-4xl text-custom mb-4"></i>
                         <h3 class="text-xl font-bold mb-2">Servicio 1</h3>
                         <p class="text-gray-700">Descripción del Servicio 1.</p>
-                        <a href="#" class="text-custom font-semibold hover:underline">Más Información</a>
+                        <a href="#"
+                            class="text-custom font-semibold mt-2 inline-block transition-colors duration-300 hover:text-custom-hover">Más
+                            Información</a>
                     </div>
                     <!-- Servicio 2 -->
-                    <div class="bg-white p-6 rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="400">
-                        <i class="fas fa-stethoscope text-5xl text-custom mb-4"></i>
+                    <div class="bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105"
+                        data-aos="fade-up" data-aos-delay="300">
+                        <i class="fas fa-stethoscope text-4xl text-custom mb-4"></i>
                         <h3 class="text-xl font-bold mb-2">Servicio 2</h3>
                         <p class="text-gray-700">Descripción del Servicio 2.</p>
-                        <a href="#" class="text-custom font-semibold hover:underline">Más Información</a>
+                        <a href="#"
+                            class="text-custom font-semibold mt-2 inline-block transition-colors duration-300 hover:text-custom-hover">Más
+                            Información</a>
                     </div>
                     <!-- Servicio 3 -->
-                    <div class="bg-white p-6 rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="600">
-                        <i class="fas fa-hospital text-5xl text-custom mb-4"></i>
+                    <div class="bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105"
+                        data-aos="fade-up" data-aos-delay="500">
+                        <i class="fas fa-hospital text-4xl text-custom mb-4"></i>
                         <h3 class="text-xl font-bold mb-2">Servicio 3</h3>
                         <p class="text-gray-700">Descripción del Servicio 3.</p>
-                        <a href="#" class="text-custom font-semibold hover:underline">Más Información</a>
+                        <a href="#"
+                            class="text-custom font-semibold mt-2 inline-block transition-colors duration-300 hover:text-custom-hover">Más
+                            Información</a>
                     </div>
                     <!-- Servicio 4 -->
-                    <div class="bg-white p-6 rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="800">
-                        <i class="fas fa-pills text-5xl text-custom mb-4"></i>
+                    <div class="bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105"
+                        data-aos="fade-up" data-aos-delay="700">
+                        <i class="fas fa-pills text-4xl text-custom mb-4"></i>
                         <h3 class="text-xl font-bold mb-2">Servicio 4</h3>
                         <p class="text-gray-700">Descripción del Servicio 4.</p>
-                        <a href="#" class="text-custom font-semibold hover:underline">Más Información</a>
+                        <a href="#"
+                            class="text-custom font-semibold mt-2 inline-block transition-colors duration-300 hover:text-custom-hover">Más
+                            Información</a>
                     </div>
                     <!-- Servicio 5 -->
-                    <div class="bg-white p-6 rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="1000">
-                        <i class="fas fa-user-md text-5xl text-custom mb-4"></i>
+                    <div class="bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105"
+                        data-aos="fade-up" data-aos-delay="900">
+                        <i class="fas fa-user-md text-4xl text-custom mb-4"></i>
                         <h3 class="text-xl font-bold mb-2">Servicio 5</h3>
                         <p class="text-gray-700">Descripción del Servicio 5.</p>
-                        <a href="#" class="text-custom font-semibold hover:underline">Más Información</a>
+                        <a href="#"
+                            class="text-custom font-semibold mt-2 inline-block transition-colors duration-300 hover:text-custom-hover">Más
+                            Información</a>
                     </div>
                     <!-- Servicio 6 -->
-                    <div class="bg-white p-6 rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="1200">
-                        <i class="fas fa-user-nurse text-5xl text-custom mb-4"></i>
+                    <div class="bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105"
+                        data-aos="fade-up" data-aos-delay="1100">
+                        <i class="fas fa-user-nurse text-4xl text-custom mb-4"></i>
                         <h3 class="text-xl font-bold mb-2">Servicio 6</h3>
                         <p class="text-gray-700">Descripción del Servicio 6.</p>
-                        <a href="#" class="text-custom font-semibold hover:underline">Más Información</a>
+                        <a href="#"
+                            class="text-custom font-semibold mt-2 inline-block transition-colors duration-300 hover:text-custom-hover">Más
+                            Información</a>
                     </div>
                 </div>
             </div>
         </section>
+
+
 
         <!-- Sección Sobre Mí -->
         <section id="sobre-mi" class="aos-init aos-animate py-16">
