@@ -9,13 +9,30 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         integrity="sha512-..." crossorigin="anonymous">
+    <style>
+        body {
+            transition: background-color 0.5s ease-in-out;
+        }
+
+        body.navbar-scrolled .fixed {
+            backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, 0.8);
+            transition: background-color 0.5s ease-in-out;
+        }
+
+        body.navbar-scrolled .text-custom-primary {
+            color: #1a202c;
+            /* Change to the desired color when scrolled */
+            transition: color 0.5s ease-in-out;
+        }
+    </style>
 </head>
 
 <body class="font-sans bg-gray-300">
 
     <!-- Encabezado con Logo y Navbar -->
     <!-- Navbar Fijo con Animación -->
-    <header class="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
+    <header id="navbar" class="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
         <div class="container mx-auto flex items-center justify-between p-4">
             <!-- Logo a la izquierda -->
             <div class="">
@@ -308,6 +325,13 @@
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
         AOS.init();
+        // Add scroll event listener to toggle classes on the body
+        window.addEventListener('scroll', function () {
+            var navbar = document.getElementById('navbar');
+            var shouldAddClass = window.scrollY > 0;
+
+            document.body.classList.toggle('navbar-scrolled', shouldAddClass);
+        });
     </script>
 </body>
 
