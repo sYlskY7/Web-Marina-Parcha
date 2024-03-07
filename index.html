@@ -27,12 +27,28 @@
             /* Change to the desired color when scrolled */
             transition: color 0.5s ease-in-out;
         }
+
+        .logo-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        .logo-hover {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .logo-container:hover .logo-hover {
+            opacity: 1;
+        }
     </style>
 </head>
 
 <body class="font-sans">
 
-    <!-- Encabezado con Logo y Navbar -->
     <!-- Encabezado con Logo y Navbar -->
     <header id="navbar" class="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
         <div class="container mx-auto flex items-center justify-between p-4">
@@ -43,9 +59,9 @@
                     <i class="fas fa-bars text-2xl"></i>
                 </button>
             </div>
-            <div class="">
-                <!-- Logo a la izquierda -->
+            <div class="logo-container">
                 <img src="./Assets/Images/logo.png" alt="Logo" class="w-16 h-12">
+                <img src="./Assets/Images/logo-verde.png" alt="Logo Verde" class="logo-hover w-16 h-12">
             </div>
             <nav id="navbar-links" class="hidden md:flex items-center space-x-4">
                 <a href="#inicio"
@@ -387,6 +403,15 @@
                     }
                 });
             });
+        });
+        const logoContainer = document.querySelector('.logo-container');
+
+        logoContainer.addEventListener('mouseover', () => {
+            logoContainer.classList.add('hover');
+        });
+
+        logoContainer.addEventListener('mouseout', () => {
+            logoContainer.classList.remove('hover');
         });
     </script>
 </body>
