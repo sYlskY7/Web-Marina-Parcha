@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Login</title>
+</head>
+<body class="bg-gray-100 h-screen flex items-center justify-center">
+    <div class="bg-white p-10 rounded-md shadow-md w-96 space-y-8">
+        <h2 class="text-3xl font-bold mb-6">Iniciar sesión</h2>
+        <form>
+            <div class="mb-8 relative">
+                <input type="text" id="username" name="username" class="w-full border p-4 rounded focus:outline-none focus:border-green-300" required>
+                <label for="username" class="absolute top-3 left-4 text-gray-500 transition-all pointer-events-none" id="username-label">Usuario</label>
+            </div>
+            <div class="mb-8 relative">
+                <input type="password" id="password" name="password" class="w-full border p-4 rounded focus:outline-none focus:border-green-300" required>
+                <label for="password" class="absolute top-3 left-4 text-gray-500 transition-all pointer-events-none" id="password-label">Contraseña</label>
+            </div>
+            <button type="submit" class="bg-green-300 text-white p-4 rounded w-full transition-transform duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring focus:border-green-300">Iniciar sesión</button>
+        </form>
+
+        <script>
+            document.getElementById('username').addEventListener('input', function() {
+                document.getElementById('username-label').style.transform = this.value ? 'translateY(-150%)' : '';
+            });
+
+            document.getElementById('password').addEventListener('input', function() {
+                document.getElementById('password-label').style.transform = this.value ? 'translateY(-150%)' : '';
+            });
+        </script>
+    </div>
+</body>
+</html>

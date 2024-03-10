@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Registro</title>
+</head>
+
+<body class="bg-gray-100 h-screen flex items-center justify-center">
+    <div
+        class="bg-white p-10 rounded-lg shadow-md w-96 transform scale-100 transition-transform duration-300 ease-in-out">
+        <h2 class="text-3xl font-bold mb-6">Crear cuenta</h2>
+        <form>
+            <div class="mb-8 relative transition-transform duration-300 ease-in-out transform scale-100">
+                <input type="text" id="name" name="name"
+                    class="w-full border p-4 rounded focus:outline-none focus:border-green-300 transition-transform duration-300 ease-in-out transform scale-100"
+                    required>
+                <label id="name-label" for="name"
+                    class="absolute top-3 left-4 text-gray-500 transition-transform duration-300 ease-in-out transform scale-100 pointer-events-none">Nombre</label>
+            </div>
+            <div class="mb-8 relative transition-transform duration-300 ease-in-out transform scale-100">
+                <input type="email" id="email" name="email"
+                    class="w-full border p-4 rounded focus:outline-none focus:border-green-300 transition-transform duration-300 ease-in-out transform scale-100"
+                    required>
+                <label id="email-label" for="email"
+                    class="absolute top-3 left-4 text-gray-500 transition-transform duration-300 ease-in-out transform scale-100 pointer-events-none">Correo
+                    electrónico</label>
+            </div>
+            <div class="mb-8 relative transition-transform duration-300 ease-in-out transform scale-100">
+                <input type="password" id="password" name="password"
+                    class="w-full border p-4 rounded focus:outline-none focus:border-green-300 transition-transform duration-300 ease-in-out transform scale-100"
+                    required>
+                <label id="password-label" for="password"
+                    class="absolute top-3 left-4 text-gray-500 transition-transform duration-300 ease-in-out transform scale-100 pointer-events-none">Contraseña</label>
+            </div>
+            <button type="submit"
+                class="bg-green-300 text-white p-4 rounded w-full transition-transform duration-300 ease-in-out transform scale-100 hover:scale-105 focus:outline-none focus:ring focus:border-green-300">Crear
+                cuenta</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('name').addEventListener('input', function () {
+            document.getElementById('name-label').style.transform = this.value ? 'translateY(-150%)' : '';
+        });
+
+        document.getElementById('email').addEventListener('input', function () {
+            document.getElementById('email-label').style.transform = this.value ? 'translateY(-150%)' : '';
+        });
+
+        document.getElementById('password').addEventListener('input', function () {
+            document.getElementById('password-label').style.transform = this.value ? 'translateY(-150%)' : '';
+        });
+    </script>
+</body>
+
+</html>
