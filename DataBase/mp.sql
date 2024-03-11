@@ -1,4 +1,5 @@
 DROP DATABASE IF EXISTS MP;
+
 -- Crear la base de datos
 CREATE DATABASE IF NOT EXISTS MP;
 
@@ -21,6 +22,8 @@ CREATE TABLE Cita (
     hora TIME NOT NULL,
     direccion VARCHAR(255) NOT NULL,
     notas TEXT,
+    estado VARCHAR(20) NOT NULL DEFAULT 'Pendiente',
+    resultados TEXT,  
     FOREIGN KEY (idCliente) REFERENCES Cliente(idCliente)
 );
 
@@ -32,4 +35,16 @@ CREATE TABLE Usuario (
     contrasena VARCHAR(100) NOT NULL,
     UNIQUE (nombreUsuario),  -- Asegura que los nombres de usuario sean únicos
     FOREIGN KEY (idCliente) REFERENCES Cliente(idCliente)
+);
+
+-- Crear tabla de historial médico
+CREATE TABLE HistorialMedico (
+    idHistorial INT PRIMARY KEY AUTO_INCREMENT,
+    idCliente INT,
+    idCita INT,
+    patologia VARCHAR(255) NOT NULL,
+    tratamiento TEXT,
+    resultados TEXT,
+    FOREIGN KEY (idCliente) REFERENCES Cliente(idCliente),
+    FOREIGN KEY (idCita) REFERENCES Cita(idCita)
 );
