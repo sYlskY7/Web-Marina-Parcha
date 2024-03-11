@@ -1,36 +1,131 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/material_green.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-..." crossorigin="anonymous">
     <title>Reservar Cita</title>
+    <style>
+        /* Ocultar la flecha por defecto del select */
+        select {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+        }
+
+        /* Añadir una flecha personalizada */
+        .custom-select::after {
+            content: '\25BC';
+            position: absolute;
+            top: 50%;
+            right: 12px;
+            transform: translateY(-50%);
+            pointer-events: none;
+        }
+
+        /* Cambiar el color al pasar por encima del select */
+        .custom-select:hover {
+            border-color: #48BB78;
+            /* green-300 */
+            background-color: #F0FFF4;
+            /* hover:bg-green-50 */
+        }
+
+        /* Estilo moderno para el área de comentarios */
+        #comentarios {
+            resize: none;
+            transition: border-color 0.3s ease;
+        }
+
+        #comentarios:hover,
+        #comentarios:focus {
+            border-color: #48BB78;
+            /* green-300 */
+            background-color: #F0FFF4;
+            /* hover:bg-green-50 */
+        }
+
+        /* Estilo moderno para el input de fecha */
+        #fecha {
+            transition: border-color 0.3s ease;
+        }
+
+        #fecha:hover,
+        #fecha:focus {
+            border-color: #48BB78;
+            /* green-300 */
+            background-color: #F0FFF4;
+            /* hover:bg-green-50 */
+        }
+    </style>
 </head>
+
 <body class="bg-gray-100 h-screen flex items-center justify-center">
-    <div class="bg-white p-10 rounded-md shadow-md w-96 space-y-8">
-        <h2 class="text-3xl font-bold mb-6">Reservar Cita</h2>
-        <form>
-            <div class="mb-8">
-                <label for="tratamiento" class="block text-gray-500 text-sm font-bold mb-2">Tratamiento</label>
-                <select id="tratamiento" name="tratamiento" class="w-full border p-2 rounded focus:outline-none focus:border-green-300">
-                    <option value="Inyectables y Dosis">Inyectables y Dosis</option>
-                    <option value="Cura de Herida Quirúrgica">Cura de Herida Quirúrgica</option>
-                    <option value="Cura de Herida Crónica">Cura de Herida Crónica</option>
-                    <option value="Toma de Constantes">Toma de Constantes</option>
-                    <option value="Formación">Formación</option>
-                    <option value="Otros">Otros</option>
-                </select>
+    <div class="bg-white p-10 rounded-md shadow-md max-w-md w-full space-y-8">
+        <h2 class="text-3xl font-bold mb-6 text-center">
+            Reservar Cita
+        </h2>
+        <form> 
+            <div class="mb-4">
+                <label for="tratamiento" class="block text-gray-500 text-sm font-bold mb-2">
+                    <i class="fas fa-syringe text-green-500 mr-2"></i> Tratamiento
+                </label>
+                <div class="relative">
+                    <select id="tratamiento" name="tratamiento"
+                        class="custom-select w-full border p-2 rounded focus:outline-none focus:border-green-300 hover:border-green-300 transition-all duration-300">
+                        <option value="Inyectables y Dosis">Inyectables y Dosis</option>
+                        <option value="Cura de Herida Quirúrgica">Cura de Herida Quirúrgica</option>
+                        <option value="Cura de Herida Crónica">Cura de Herida Crónica</option>
+                        <option value="Toma de Constantes">Toma de Constantes</option>
+                        <option value="Formación">Formación</option>
+                        <option value="Otros">Otros</option>
+                    </select>
+                    <span class="absolute top-2 right-3">
+                        <i class="fas fa-caret-down text-green-300"></i>
+                    </span>
+                </div>
             </div>
-            <div class="mb-8">
-                <label for="fecha" class="block text-gray-500 text-sm font-bold mb-2">Fecha de la cita</label>
-                <input type="date" id="fecha" name="fecha" class="w-full border p-2 rounded focus:outline-none focus:border-green-300">
+            <div class="mb-4">
+                <label for="fecha" class="block text-gray-500 text-sm font-bold mb-2">
+                    <i class="far fa-calendar-alt text-green-500 mr-2"></i> Fecha de la cita
+                </label>
+                <div class="relative">
+                    <input type="text" id="fecha" name="fecha"
+                        class="w-full border p-2 rounded focus:outline-none focus:border-green-300">
+                    <span class="absolute top-2 right-3">
+                        <i class="far fa-calendar-alt text-green-300"></i>
+                    </span>
+                </div>
             </div>
-            <div class="mb-8">
-                <label for="comentarios" class="block text-gray-500 text-sm font-bold mb-2">Comentarios adicionales</label>
-                <textarea id="comentarios" name="comentarios" rows="4" class="w-full border p-2 rounded focus:outline-none focus:border-green-300"></textarea>
+            <div class="mb-4">
+                <label for="comentarios" class="block text-gray-500 text-sm font-bold mb-2">
+                    <i class="fas fa-comment-alt text-green-500 mr-2"></i> Comentarios adicionales
+                </label>
+                <textarea id="comentarios" name="comentarios" rows="4"
+                    class="w-full border p-2 rounded focus:outline-none focus:border-green-300"></textarea>
             </div>
-            <button type="submit" class="bg-green-300 text-white p-4 rounded w-full transition-transform duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring focus:border-green-300">Reservar Cita</button>
+            <button type="submit"
+                class="bg-green-300 text-white p-4 rounded w-full transition-transform duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring focus:border-green-300">
+                <i class="far fa-check-circle text-white mr-2"></i> Reservar Cita
+            </button>
         </form>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/es.js"></script>
+    <script>
+        flatpickr('#fecha', {
+            dateFormat: 'Y-m-d',
+            enableTime: false,
+            theme: 'material_green',
+            locale: 'es'
+        });
+    </script>
 </body>
+
 </html>
