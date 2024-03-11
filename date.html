@@ -37,30 +37,39 @@
         }
 
         /* Estilo moderno para el área de comentarios */
-        #comentarios {
-            resize: none;
+        .bordered-input {
             transition: border-color 0.3s ease;
         }
 
-        #comentarios:hover,
-        #comentarios:focus {
+        .bordered-input:hover,
+        .bordered-input:focus {
             border-color: #48BB78;
             /* green-300 */
             background-color: #F0FFF4;
             /* hover:bg-green-50 */
         }
 
+        /* Estilo para el botón de Reservar Cita */
+        .reservar-btn {
+            transition: background-color 0.3s ease;
+        }
+
+        .reservar-btn:hover {
+            background-color: #38A169;
+            /* hover:bg-green-600 */
+        }
+
         /* Estilo moderno para el input de fecha */
         #fecha {
             transition: border-color 0.3s ease;
+            background-color: #F0FFF4;
+            /* bg-green-50 */
         }
 
         #fecha:hover,
         #fecha:focus {
             border-color: #48BB78;
             /* green-300 */
-            background-color: #F0FFF4;
-            /* hover:bg-green-50 */
         }
     </style>
 </head>
@@ -70,7 +79,7 @@
         <h2 class="text-3xl font-bold mb-6 text-center">
             Reservar Cita
         </h2>
-        <form> 
+        <form>
             <div class="mb-4">
                 <label for="tratamiento" class="block text-gray-500 text-sm font-bold mb-2">
                     <i class="fas fa-syringe text-green-500 mr-2"></i> Tratamiento
@@ -96,10 +105,96 @@
                 </label>
                 <div class="relative">
                     <input type="text" id="fecha" name="fecha"
-                        class="w-full border p-2 rounded focus:outline-none focus:border-green-300">
+                        class="bordered-input w-full border p-2 rounded focus:outline-none focus:border-green-300">
                     <span class="absolute top-2 right-3">
                         <i class="far fa-calendar-alt text-green-300"></i>
                     </span>
+                </div>
+            </div>
+            <div class="mb-4 flex">
+                <div class="w-1/2 pr-2">
+                    <label for="municipio" class="block text-gray-500 text-sm font-bold mb-2">
+                        <i class="fas fa-city text-green-500 mr-2"></i> Municipio
+                    </label>
+                    <div class="relative">
+                        <select id="municipio" name="municipio"
+                            class="custom-select w-full border p-2 rounded focus:outline-none focus:border-green-300 hover:border-green-300 transition-all duration-300">
+                            <option value="" selected disabled>Selecciona un municipio</option>
+                            <option value="Santander">Santander</option>
+                            <option value="Torrelavega">Torrelavega</option>
+                            <option value="Camargo">Camargo</option>
+                            <option value="Piélagos">Piélagos</option>
+                            <option value="Santoña">Santoña</option>
+                            <option value="Laredo">Laredo</option>
+                            <option value="Colindres">Colindres</option>
+                            <option value="Castro Urdiales">Castro Urdiales</option>
+                            <option value="Medio Cudeyo">Medio Cudeyo</option>
+                            <option value="Marina de Cudeyo">Marina de Cudeyo</option>
+                            <option value="Entrambasaguas">Entrambasaguas</option>
+                            <option value="Ribamontán al Mar">Ribamontán al Mar</option>
+                            <option value="Hazas de Cesto">Hazas de Cesto</option>
+                            <option value="Bárcena de Cicero">Bárcena de Cicero</option>
+                            <option value="Astillero">Astillero</option>
+                            <option value="Penagos">Penagos</option>
+                            <option value="Solórzano">Solórzano</option>
+                            <option value="Villaescusa">Villaescusa</option>
+                            <option value="Ramales de la Victoria">Ramales de la Victoria</option>
+                            <option value="Reocín">Reocín</option>
+                            <option value="Guriezo">Guriezo</option>
+                            <option value="Voto">Voto</option>
+                            <option value="Ampuero">Ampuero</option>
+                            <option value="Val de San Vicente">Val de San Vicente</option>
+                            <option value="Campoo de Enmedio">Campoo de Enmedio</option>
+                            <option value="Campoo de Yuso">Campoo de Yuso</option>
+                            <option value="Valdeprado del Río">Valdeprado del Río</option>
+                            <option value="Las Rozas de Valdearroyo">Las Rozas de Valdearroyo</option>
+                            <option value="Soba">Soba</option>
+                            <option value="Hermandad de Campoo de Suso">Hermandad de Campoo de Suso</option>
+                            <option value="Vega de Liébana">Vega de Liébana</option>
+                            <option value="Cabezón de Liébana">Cabezón de Liébana</option>
+                            <option value="Pesquera">Pesquera</option>
+                            <option value="Rionansa">Rionansa</option>
+                            <option value="Herrerías">Herrerías</option>
+                            <option value="Luena">Luena</option>
+                            <option value="Miera">Miera</option>
+                            <option value="Valdeolea">Valdeolea</option>
+                            <option value="San Roque de Riomiera">San Roque de Riomiera</option>
+                        </select>
+
+                        <span class="absolute top-2 right-3">
+                            <i class="fas fa-caret-down text-green-300"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="w-1/2 pl-2">
+                    <label for="codigoPostal" class="block text-gray-500 text-sm font-bold mb-2">
+                        <i class="fas fa-mail-bulk text-green-500 mr-2"></i> Código Postal
+                    </label>
+                    <input type="text" id="codigoPostal" name="codigoPostal"
+                        class="bordered-input w-full border p-2 rounded focus:outline-none focus:border-green-300">
+                </div>
+            </div>
+            <div class="mb-4">
+                <label for="calle" class="block text-gray-500 text-sm font-bold mb-2">
+                    <i class="fas fa-road text-green-500 mr-2"></i> Calle
+                </label>
+                <input type="text" id="calle" name="calle"
+                    class="bordered-input w-full border p-2 rounded focus:outline-none focus:border-green-300">
+            </div>
+            <div class="flex mb-4">
+                <div class="w-1/2 pr-2">
+                    <label for="numero" class="block text-gray-500 text-sm font-bold mb-2">
+                        <i class="fas fa-sort-numeric-up-alt text-green-500 mr-2"></i> Número
+                    </label>
+                    <input type="text" id="numero" name="numero"
+                        class="bordered-input w-full border p-2 rounded focus:outline-none focus:border-green-300">
+                </div>
+                <div class="w-1/2 pl-2">
+                    <label for="piso" class="block text-gray-500 text-sm font-bold mb-2">
+                        <i class="fas fa-building text-green-500 mr-2"></i> Piso
+                    </label>
+                    <input type="text" id="piso" name="piso"
+                        class="bordered-input w-full border p-2 rounded focus:outline-none focus:border-green-300">
                 </div>
             </div>
             <div class="mb-4">
@@ -107,10 +202,10 @@
                     <i class="fas fa-comment-alt text-green-500 mr-2"></i> Comentarios adicionales
                 </label>
                 <textarea id="comentarios" name="comentarios" rows="4"
-                    class="w-full border p-2 rounded focus:outline-none focus:border-green-300"></textarea>
+                    class="bordered-input w-full border p-2 rounded focus:outline-none focus:border-green-300"></textarea>
             </div>
             <button type="submit"
-                class="bg-green-300 text-white p-4 rounded w-full transition-transform duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring focus:border-green-300">
+                class="reservar-btn text-white p-4 rounded w-full bg-green-300 transition-transform duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring focus:border-green-300">
                 <i class="far fa-check-circle text-white mr-2"></i> Reservar Cita
             </button>
         </form>
