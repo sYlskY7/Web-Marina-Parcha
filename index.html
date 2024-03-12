@@ -137,12 +137,13 @@
                         </div>
                         <p class="text-gray-700">Servicio de administración de inyecciones y dosis.</p>
                         <a href="#"
-                            class="text-green-300 font-semibold mt-2 inline-block transition-colors duration-300 hover:text-green-500 hover:bg-opacity-50 transform flex items-center transition-transform hover:scale-105">
+                            class="text-green-300 font-semibold mt-2 inline-block transition-colors duration-300 hover:text-green-500 hover:bg-opacity-50 transform flex items-center transition-transform hover:scale-105"
+                            onclick="openModal('modal-inyectables')">
                             Más Información
                             <i class="fas fa-arrow-right ml-2 text-sm"></i>
                         </a>
                     </div>
-                    <!-- Cura de Herida Quirúrgica (nuevo icono) -->
+                    <!-- Cura de Herida Quirúrgica -->
                     <div class="bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105"
                         data-aos="fade-up" data-aos-delay="300">
                         <div class="flex items-center mb-4">
@@ -151,12 +152,13 @@
                         </div>
                         <p class="text-gray-700">Servicio de cuidado y curación de heridas quirúrgicas.</p>
                         <a href="#"
-                            class="text-green-300 font-semibold mt-2 inline-block transition-colors duration-300 hover:text-green-500 hover:bg-opacity-50 transform flex items-center transition-transform hover:scale-105">
+                            class="text-green-300 font-semibold mt-2 inline-block transition-colors duration-300 hover:text-green-500 hover:bg-opacity-50 transform flex items-center transition-transform hover:scale-105"
+                            onclick="openModal('modal-curaheridaquirurgica')">
                             Más Información
                             <i class="fas fa-arrow-right ml-2 text-sm"></i>
                         </a>
                     </div>
-                    <!-- Cura de Herida Crónica (nuevo icono) -->
+                    <!-- Cura de Herida Crónica -->
                     <div class="bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105"
                         data-aos="fade-up" data-aos-delay="500">
                         <div class="flex items-center mb-4">
@@ -165,12 +167,13 @@
                         </div>
                         <p class="text-gray-700">Servicio especializado en el cuidado de heridas crónicas.</p>
                         <a href="#"
-                            class="text-green-300 font-semibold mt-2 inline-block transition-colors duration-300 hover:text-green-500 hover:bg-opacity-50 transform flex items-center transition-transform hover:scale-105">
+                            class="text-green-300 font-semibold mt-2 inline-block transition-colors duration-300 hover:text-green-500 hover:bg-opacity-50 transform flex items-center transition-transform hover:scale-105"
+                            onclick="openModal('modal-curaheridacronica')">
                             Más Información
                             <i class="fas fa-arrow-right ml-2 text-sm"></i>
                         </a>
                     </div>
-                    <!-- Toma de Constantes (icono actualizado) -->
+                    <!-- Toma de Constantes -->
                     <div class="bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105"
                         data-aos="fade-up" data-aos-delay="700">
                         <div class="flex items-center mb-4">
@@ -179,7 +182,8 @@
                         </div>
                         <p class="text-gray-700">Servicio de medición y registro de constantes vitales.</p>
                         <a href="#"
-                            class="text-green-300 font-semibold mt-2 inline-block transition-colors duration-300 hover:text-green-500 hover:bg-opacity-50 transform flex items-center transition-transform hover:scale-105">
+                            class="text-green-300 font-semibold mt-2 inline-block transition-colors duration-300 hover:text-green-500 hover:bg-opacity-50 transform flex items-center transition-transform hover:scale-105"
+                            onclick="openModal('modal-tomaconstantes')">
                             Más Información
                             <i class="fas fa-arrow-right ml-2 text-sm"></i>
                         </a>
@@ -193,7 +197,8 @@
                         </div>
                         <p class="text-gray-700">Ofrecemos formación en temas de salud y cuidado personal.</p>
                         <a href="#"
-                            class="text-green-300 font-semibold mt-2 inline-block transition-colors duration-300 hover:text-green-500 hover:bg-opacity-50 transform flex items-center transition-transform hover:scale-105">
+                            class="text-green-300 font-semibold mt-2 inline-block transition-colors duration-300 hover:text-green-500 hover:bg-opacity-50 transform flex items-center transition-transform hover:scale-105"
+                            onclick="openModal('modal-formacion')">
                             Más Información
                             <i class="fas fa-arrow-right ml-2 text-sm"></i>
                         </a>
@@ -207,7 +212,8 @@
                         </div>
                         <p class="text-gray-700">Otros servicios disponibles para tus necesidades.</p>
                         <a href="#"
-                            class="text-green-300 font-semibold mt-2 inline-block transition-colors duration-300 hover:text-green-500 hover:bg-opacity-50 transform flex items-center transition-transform hover:scale-105">
+                            class="text-green-300 font-semibold mt-2 inline-block transition-colors duration-300 hover:text-green-500 hover:bg-opacity-50 transform flex items-center transition-transform hover:scale-105"
+                            onclick="openModal('modal-otros')">
                             Más Información
                             <i class="fas fa-arrow-right ml-2 text-sm"></i>
                         </a>
@@ -215,6 +221,157 @@
                 </div>
             </div>
         </section>
+        <!-- Modal Inyectables y Dosis -->
+        <div id="modal-inyectables" class="modal hidden z-50 fixed inset-0 overflow-y-auto bg-opacity-50 bg-black">
+            <div class="flex items-center justify-center min-h-screen">
+                <div class="modal-content bg-white p-4 md:p-6 rounded-lg shadow-lg max-w-md">
+                    <div class="modal-header flex justify-end">
+                        <button id="close-modal-inyectables" class="modal-close">
+                            <i class="fas fa-times text-gray-600"></i>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <h2 class="text-xl font-bold mb-4">Inyectables y Dosis</h2>
+                        <p class="text-base md:text-lg text-gray-700">Servicio de administración de inyecciones y dosis.
+                        </p>
+                        <p class="text-base md:text-lg text-gray-700">En nuestro centro, nos especializamos en
+                            proporcionar inyecciones y dosis de manera segura y eficiente. Nuestro equipo de
+                            profesionales altamente capacitados está comprometido con tu bienestar y comodidad durante
+                            todo el proceso.</p>
+                        <p class="text-base md:text-lg text-gray-700">Además de la administración de medicamentos por
+                            vía intramuscular o intravenosa, también ofrecemos asesoramiento personalizado sobre los
+                            medicamentos recetados y su uso adecuado. Si tienes alguna pregunta o inquietud, no dudes en
+                            consultarnos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Cura de Herida Quirúrgica -->
+        <div id="modal-curaheridaquirurgica"
+            class="modal hidden z-50 fixed inset-0 overflow-y-auto bg-opacity-50 bg-black">
+            <div class="flex items-center justify-center min-h-screen">
+                <div class="modal-content bg-white p-4 md:p-6 rounded-lg shadow-lg max-w-md">
+                    <div class="modal-header flex justify-end">
+                        <button id="close-modal-curaheridaquirurgica" class="modal-close">
+                            <i class="fas fa-times text-gray-600"></i>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <h2 class="text-xl font-bold mb-4">Cura de Herida Quirúrgica</h2>
+                        <p class="text-base md:text-lg text-gray-700">Servicio de cuidado y curación de heridas
+                            quirúrgicas.</p>
+                        <p class="text-base md:text-lg text-gray-700">Nuestro equipo de profesionales altamente
+                            capacitados está aquí para brindarte el mejor cuidado posible para tus heridas quirúrgicas.
+                            Con tecnología de vanguardia y técnicas probadas, nos aseguraremos de que tu proceso de
+                            curación sea lo más cómodo y efectivo posible.</p>
+                        <p class="text-base md:text-lg text-gray-700">Desde la limpieza inicial hasta el seguimiento
+                            continuo, estamos comprometidos con tu bienestar y recuperación. No dudes en contactarnos si
+                            tienes alguna pregunta o preocupación sobre tus heridas quirúrgicas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Cura de Herida Crónica -->
+        <div id="modal-curaheridacronica"
+            class="modal hidden z-50 fixed inset-0 overflow-y-auto bg-opacity-50 bg-black">
+            <div class="flex items-center justify-center min-h-screen">
+                <div class="modal-content bg-white p-4 md:p-6 rounded-lg shadow-lg max-w-md">
+                    <div class="modal-header flex justify-end">
+                        <button id="close-modal-curaheridacronica" class="modal-close">
+                            <i class="fas fa-times text-gray-600"></i>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <h2 class="text-xl font-bold mb-4">Cura de Herida Crónica</h2>
+                        <p class="text-base md:text-lg text-gray-700">Servicio especializado en el cuidado de heridas
+                            crónicas.</p>
+                        <p class="text-base md:text-lg text-gray-700">Entendemos lo desafiante que puede ser el manejo
+                            de heridas crónicas, por eso estamos aquí para ayudarte. Nuestro equipo de expertos
+                            trabajará contigo para desarrollar un plan de tratamiento personalizado que se adapte a tus
+                            necesidades específicas.</p>
+                        <p class="text-base md:text-lg text-gray-700">Utilizando las últimas tecnologías y enfoques
+                            innovadores, estamos comprometidos a ayudarte a sanar y mejorar tu calidad de vida. No dudes
+                            en comunicarte con nosotros para programar una consulta y comenzar tu camino hacia la
+                            curación.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Toma de Constantes -->
+        <div id="modal-tomaconstantes" class="modal hidden z-50 fixed inset-0 overflow-y-auto bg-opacity-50 bg-black">
+            <div class="flex items-center justify-center min-h-screen">
+                <div class="modal-content bg-white p-4 md:p-6 rounded-lg shadow-lg max-w-md">
+                    <div class="modal-header flex justify-end">
+                        <button id="close-modal-tomaconstantes" class="modal-close">
+                            <i class="fas fa-times text-gray-600"></i>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <h2 class="text-xl font-bold mb-4">Toma de Constantes</h2>
+                        <p class="text-base md:text-lg text-gray-700">Servicio de medición y registro de constantes
+                            vitales.</p>
+                        <p class="text-base md:text-lg text-gray-700">Nuestro equipo está dedicado a monitorear y
+                            registrar tus constantes vitales de manera precisa y regular. Ya sea que necesites
+                            seguimiento continuo o una sola medición, estamos aquí para ayudarte.</p>
+                        <p class="text-base md:text-lg text-gray-700">Nos aseguraremos de que te sientas cómodo y seguro
+                            durante todo el proceso de toma de constantes. Si tienes alguna pregunta sobre tus
+                            resultados o necesitas más información sobre cómo mantener un estilo de vida saludable, no
+                            dudes en preguntarnos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Formación -->
+        <div id="modal-formacion" class="modal hidden z-50 fixed inset-0 overflow-y-auto bg-opacity-50 bg-black">
+            <div class="flex items-center justify-center min-h-screen">
+                <div class="modal-content bg-white p-4 md:p-6 rounded-lg shadow-lg max-w-md">
+                    <div class="modal-header flex justify-end">
+                        <button id="close-modal-formacion" class="modal-close">
+                            <i class="fas fa-times text-gray-600"></i>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <h2 class="text-xl font-bold mb-4">Formación</h2>
+                        <p class="text-base md:text-lg text-gray-700">Ofrecemos formación en temas de salud y cuidado
+                            personal.</p>
+                        <p class="text-base md:text-lg text-gray-700">Nuestro compromiso con la salud va más allá de la
+                            atención clínica. Ofrecemos una variedad de programas de formación diseñados para educarte
+                            sobre cómo mantener un estilo de vida saludable y prevenir enfermedades.</p>
+                        <p class="text-base md:text-lg text-gray-700">Desde clases de nutrición hasta talleres de
+                            gestión del estrés, estamos aquí para apoyarte en tu viaje hacia el bienestar total. ¡No
+                            dudes en preguntar sobre nuestras próximas oportunidades de formación!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Otros -->
+        <div id="modal-otros" class="modal hidden z-50 fixed inset-0 overflow-y-auto bg-opacity-50 bg-black">
+            <div class="flex items-center justify-center min-h-screen">
+                <div class="modal-content bg-white p-4 md:p-6 rounded-lg shadow-lg max-w-md">
+                    <div class="modal-header flex justify-end">
+                        <button id="close-modal-otros" class="modal-close">
+                            <i class="fas fa-times text-gray-600"></i>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <h2 class="text-xl font-bold mb-4">Otros</h2>
+                        <p class="text-base md:text-lg text-gray-700">Otros servicios disponibles para tus necesidades.
+                        </p>
+                        <p class="text-base md:text-lg text-gray-700">Nuestro compromiso con tu salud va más allá de los
+                            servicios tradicionales. Si necesitas algo que no ves en nuestra lista de servicios, no
+                            dudes en preguntarnos. Estamos aquí para ayudarte en cualquier forma que podamos.</p>
+                        <p class="text-base md:text-lg text-gray-700">Desde consultas médicas especializadas hasta
+                            servicios de apoyo emocional, estamos aquí para ofrecerte el apoyo que necesitas. ¡No dudes
+                            en comunicarte con nosotros para discutir tus necesidades individuales!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- Sección Sobre Mí -->
         <section id="sobre-mi" class="aos-init aos-animate py-16">
@@ -373,6 +530,34 @@
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
+        function openModal(modalId) {
+            const modal = document.getElementById(modalId);
+            modal.classList.remove('hidden');
+        }
+
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            modal.classList.add('hidden');
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            // Cierra el modal al hacer clic en el botón de cierre
+            document.querySelectorAll('.modal-close').forEach(function (button) {
+                button.addEventListener('click', function () {
+                    const modalId = this.closest('.modal').id;
+                    closeModal(modalId);
+                });
+            });
+
+            // Cierra el modal al hacer clic fuera del contenido del modal
+            document.querySelectorAll('.modal').forEach(function (modal) {
+                modal.addEventListener('click', function (event) {
+                    if (event.target === modal) {
+                        closeModal(modal.id);
+                    }
+                });
+            });
+        });
         AOS.init();
         document.addEventListener('DOMContentLoaded', function () {
             // Toggle de la clase 'hidden' en el menú al hacer clic en el ícono de hamburguesa
