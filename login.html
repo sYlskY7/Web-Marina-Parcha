@@ -1,35 +1,65 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <title>Login</title>
 </head>
+
 <body class="bg-gray-100 h-screen flex items-center justify-center">
     <div class="bg-white p-10 rounded-md shadow-md w-96 space-y-8">
         <h2 class="text-3xl font-bold mb-6">Iniciar sesión</h2>
         <form>
             <div class="mb-8 relative">
-                <input type="text" id="username" name="username" class="w-full border p-4 rounded focus:outline-none focus:border-green-300" required>
-                <label for="username" class="absolute top-3 left-4 text-gray-500 transition-all pointer-events-none" id="username-label">Usuario</label>
+                <input type="text" id="username" name="username"
+                    class="w-full border p-4 rounded focus:outline-none focus:border-green-300" required>
+                <label for="username" class="absolute top-3 left-4 text-gray-500 transition-all pointer-events-none"
+                    id="username-label">Usuario</label>
             </div>
             <div class="mb-8 relative">
-                <input type="password" id="password" name="password" class="w-full border p-4 rounded focus:outline-none focus:border-green-300" required>
-                <label for="password" class="absolute top-3 left-4 text-gray-500 transition-all pointer-events-none" id="password-label">Contraseña</label>
+                <input type="password" id="password" name="password"
+                    class="w-full border p-4 rounded focus:outline-none focus:border-green-300" required>
+                <label for="password" class="absolute top-3 left-4 text-gray-500 transition-all pointer-events-none"
+                    id="password-label">Contraseña</label>
+                <button type="button" id="toggle-password"
+                    class="absolute top-3 right-4 text-gray-500 transition-all pointer-events-auto focus:outline-none"
+                    onclick="togglePassword()">
+                    <i id="eye-icon" class="far fa-eye"></i>
+                </button>
             </div>
-            <button type="submit" class="bg-green-300 text-white p-4 rounded w-full transition-transform duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring focus:border-green-300">Iniciar sesión</button>
+            <button type="submit"
+                class="bg-green-300 text-white p-4 rounded w-full transition-transform duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring focus:border-green-300">Iniciar
+                sesión</button>
         </form>
+        <p class="mt-4 text-center">¿No tienes cuenta? <a href="register.html" class="text-green-500">Regístrate</a></p>
 
         <script>
-            document.getElementById('username').addEventListener('input', function() {
+            document.getElementById('username').addEventListener('input', function () {
                 document.getElementById('username-label').style.transform = this.value ? 'translateY(-150%)' : '';
             });
 
-            document.getElementById('password').addEventListener('input', function() {
+            document.getElementById('password').addEventListener('input', function () {
                 document.getElementById('password-label').style.transform = this.value ? 'translateY(-150%)' : '';
             });
+            function togglePassword() {
+                var passwordField = document.getElementById("password");
+                var eyeIcon = document.getElementById("eye-icon");
+
+                if (passwordField.type === "password") {
+                    passwordField.type = "text";
+                    eyeIcon.classList.remove("far", "fa-eye");
+                    eyeIcon.classList.add("fas", "fa-eye-slash");
+                } else {
+                    passwordField.type = "password";
+                    eyeIcon.classList.remove("fas", "fa-eye-slash");
+                    eyeIcon.classList.add("far", "fa-eye");
+                }
+            }
         </script>
     </div>
 </body>
+
 </html>
