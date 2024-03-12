@@ -62,7 +62,6 @@
         /* Estilo moderno para el input de fecha */
         #fecha {
             transition: border-color 0.3s ease;
-            background-color: #F0FFF4;
             /* bg-green-50 */
         }
 
@@ -105,10 +104,7 @@
                 </label>
                 <div class="relative">
                     <input type="text" id="fecha" name="fecha"
-                        class="bordered-input w-full border p-2 rounded focus:outline-none focus:border-green-300">
-                    <span class="absolute top-2 right-3">
-                        <i class="far fa-calendar-alt text-green-300"></i>
-                    </span>
+                        class="bordered-input w-full border p-2 rounded focus:outline-none focus:border-green-300 hover:border-green-300 transition-all duration-300">
                 </div>
             </div>
             <div class="mb-4 flex">
@@ -119,7 +115,7 @@
                     <div class="relative">
                         <select id="municipio" name="municipio"
                             class="custom-select w-full border p-2 rounded focus:outline-none focus:border-green-300 hover:border-green-300 transition-all duration-300">
-                            <option value="" selected disabled>Selecciona un municipio</option>
+                            <option value="" selected disabled>Elige tu municipio</option>
                             <option value="Santander">Santander</option>
                             <option value="Torrelavega">Torrelavega</option>
                             <option value="Camargo">Camargo</option>
@@ -197,6 +193,14 @@
                         class="bordered-input w-full border p-2 rounded focus:outline-none focus:border-green-300">
                 </div>
             </div>
+            <div class="mb-4">
+                <label for="telefono" class="block text-gray-500 text-sm font-bold mb-2">
+                    <i class="fas fa-phone-alt text-green-500 mr-2"></i> Teléfono de Contacto
+                </label>
+                <input type="tel" id="telefono" name="telefono" placeholder="Ingrese su teléfono"
+                    class="bordered-input w-full border p-2 rounded focus:outline-none focus:border-green-300">
+            </div>
+
             <div class="mb-4">
                 <label for="comentarios" class="block text-gray-500 text-sm font-bold mb-2">
                     <i class="fas fa-comment-alt text-green-500 mr-2"></i> Comentarios adicionales
