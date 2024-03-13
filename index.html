@@ -98,25 +98,57 @@
 
     <section id="inicio" class="min-h-screen flex bg-black relative">
         <!-- Mitad izquierda con imagen -->
-        <div class="w-full md:w-1/2 flex justify-center items-center bg-green-300 relative">
+        <div class="w-full md:w-1/2 flex justify-center items-center bg-green-500 relative">
             <img src="https://via.placeholder.com/1600x1200" alt="Imagen de fondo"
                 class="w-full h-full object-cover opacity-50">
             <!-- Doctor PNG superpuesto -->
-            <img src="./Assets/Images/doctor.png" alt="Doctor" class="absolute top-0 left-0 w-full h-full object-cover">
+            <img src="./Assets/Images/doctor.png" alt="Doctor"
+                class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 max-w-full max-h-full">
         </div>
         <div class="absolute z-50 inset-0 flex justify-center items-center" data-aos="fade-up" data-aos-delay="400">
             <div class="flex justify-center">
                 <a href="./date.html" target="_blank"
-                    class="bg-custom-primary text-white py-3 px-8 rounded-full uppercase tracking-wide font-semibold border-2 border-white transition duration-300 transform hover:scale-105 hover:bg-green-300 hover:text-white">Reserva
+                    class="bg-custom-primary text-white py-3 px-8 rounded-full uppercase tracking-wide font-semibold border-2 border-white transition duration-300 transform hover:scale-105 hover:bg-green-300 hover:text-white backdrop-filter backdrop-blur-md">Reserva
                     tu cita ahora</a>
             </div>
         </div>
         <!-- Mitad derecha con texto -->
-        <div class="w-full md:w-1/2 bg-green-500 text-white flex flex-col justify-center items-center">
+        <div class="w-full md:w-1/2 bg-green-900 text-white flex flex-col justify-center items-center">
             <div class="container mx-auto text-center">
                 <h2 class="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 mt-20" data-aos="fade-up">Marina Parcha</h2>
                 <p class="text-lg md:text-2xl text-gray-300 mb-8" data-aos="fade-up" data-aos-delay="200">Los cuidados
                     de enfermería que necesitas a domicilio</p>
+                <!-- Iconos y descripciones -->
+                <div class="flex justify-center items-center mt-20">
+                    <!-- Icono 1 -->
+                    <div class="flex flex-col items-center mr-8">
+                        <div class="bg-green-300 rounded-full p-4 mb-2">
+                            <i class="fas fa-heartbeat text-green-500 text-5xl"></i>
+                        </div>
+                        <p class="text-sm text-gray-300">Cuidado personalizado</p>
+                    </div>
+                    <!-- Icono 2 -->
+                    <div class="flex flex-col items-center mr-8">
+                        <div class="bg-green-300 rounded-full p-4 mb-2">
+                            <i class="fas fa-prescription-bottle-alt text-green-500 text-5xl"></i>
+                        </div>
+                        <p class="text-sm text-gray-300">Medicación controlada</p>
+                    </div>
+                    <!-- Icono 3 -->
+                    <div class="flex flex-col items-center mr-8">
+                        <div class="bg-green-300 rounded-full p-4 mb-2">
+                            <i class="fas fa-hands-helping text-green-500 text-5xl"></i>
+                        </div>
+                        <p class="text-sm text-gray-300">Apoyo emocional</p>
+                    </div>
+                    <!-- Icono 4 -->
+                    <div class="flex flex-col items-center">
+                        <div class="bg-green-300 rounded-full p-4 mb-2">
+                            <i class="fas fa-user-md text-green-500 text-5xl"></i>
+                        </div>
+                        <p class="text-sm text-gray-300">Profesionales cualificados</p>
+                    </div>
+                </div>
                 <div class="mt-72 flex flex-col items-center">
                     <a href="#servicios" class="text-white hover:text-custom-hover transition duration-300">
                         <p class="mb-2">¿Quieres saber más?</p>
@@ -127,11 +159,9 @@
                 </div>
             </div>
         </div>
+
+
     </section>
-
-
-
-
 
     <div class="mx-16" style="overflow-x: hidden;">
         <!-- Sección de Servicios -->
